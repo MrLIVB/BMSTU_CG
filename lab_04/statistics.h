@@ -1,0 +1,26 @@
+#ifndef STATISTICS_H
+#define STATISTICS_H
+
+#include <QDialog>
+
+namespace Ui {
+class Statistics;
+}
+
+class Statistics : public QDialog
+{
+    Q_OBJECT
+
+private:
+    void setupFirstGraph();
+    void setupSecondGraph();
+
+public:
+    explicit Statistics(QWidget *parent = nullptr);
+    ~Statistics();
+
+private:
+    Ui::Statistics *ui;
+};
+
+#endif // STATISTICS_H
