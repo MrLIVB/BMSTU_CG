@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>998</width>
+    <height>761</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>14</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>10</y>
+      <width>725</width>
+      <height>725</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>725</width>
+      <height>725</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="methodCBox">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>170</y>
+      <width>240</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="insertPolicy">
+     <enum>QComboBox::InsertAtBottom</enum>
+    </property>
+    <item>
+     <property name="text">
+      <string>ЦДА</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Брезенхем</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Брезенхем со сглаживанием</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Брезенхем целочисленный</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Библиотечный</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Ву</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>241</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout" rowstretch="0,0,0">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMaximumSize</enum>
+     </property>
+     <property name="horizontalSpacing">
+      <number>0</number>
+     </property>
+     <item row="1" column="0">
+      <widget class="QSpinBox" name="x1Ent">
+       <property name="maximum">
+        <number>720</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="xLbl">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>20</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>X</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="y1Ent">
+       <property name="maximum">
+        <number>720</number>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="yLbl">
+       <property name="text">
+        <string>Y</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QSpinBox" name="x2Ent">
+       <property name="maximum">
+        <number>720</number>
+       </property>
+       <property name="value">
+        <number>360</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="y2Ent">
+       <property name="maximum">
+        <number>720</number>
+       </property>
+       <property name="value">
+        <number>360</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="colorLbl">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>60</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fgColorBtn">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>200</y>
+      <width>170</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Основной цвет</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bgToFgBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>240</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Цвет фона -&gt; основной</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="bgColorLbl">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>60</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Box</enum>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="bgColorBtn">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>230</y>
+      <width>170</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Фоновый цвет</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="lineBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>134</y>
+      <width>240</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Построить прямую</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="degreeStepSpn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>400</y>
+      <width>90</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>5</number>
+    </property>
+    <property name="value">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sunLinesBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>430</y>
+      <width>240</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Построить прямые</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="clearBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>320</y>
+      <width>240</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Очистить экран</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="stepLbl">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>400</y>
+      <width>130</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Шаг</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lengthLbl">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>370</y>
+      <width>130</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Длина</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="lengthSpn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>370</y>
+      <width>90</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>720</number>
+    </property>
+    <property name="value">
+     <number>360</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="defaultFgBtn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>290</y>
+      <width>240</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Базовый основной цвет</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>240</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Время</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>510</y>
+      <width>240</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ступенчатость</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
